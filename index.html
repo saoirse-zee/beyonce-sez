@@ -6,7 +6,6 @@
             flex-direction: column;
             align-items: center;
             margin-top: 50px;
-            /* background-color: rgb(216, 189, 241); */
         }
         p {
             font-family: sans-serif;
@@ -52,9 +51,7 @@
             'I\'m so reckless when I rock my Givenchy dress.',
             'I\'m so possessive so I rock his Roc necklaces.',
             'My daddy Alabama, Momma Louisiana.',
-            'You mix that negro with that Creole make a Texas bama.',
             'I like my baby heir with baby hair and afros.',
-            'I like my negro nose with Jackson Five nostrils.',
             'Earned all this money but they never take the country out me.',
             'I got a hot sauce in my bag, swag.',
         ]
@@ -63,7 +60,7 @@
         const sezRaw = s.split('=')[1]
         let sez = s
             ? decodeURIComponent(sezRaw)
-            : beyQuotes[Math.round(Math.random() * 10)] 
+            : beyQuotes[Math.round(Math.random() * (beyQuotes.length - 1))] 
         
         const sezSpot = document.querySelector('#sez')
         sezSpot.innerHTML = sez 
